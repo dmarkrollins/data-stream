@@ -1,0 +1,37 @@
+<head>
+    <title>data-stream</title>
+</head>
+
+<body>
+    <h3>Data Viewer</h3>
+
+    {{> hello}}
+</body>
+
+<template name="hello">
+    <button {{startDisabled}} class="start">Start</button>
+    <button {{stopDisabled}} class="stop">Stop</button>
+
+    <table style="border: 1px solid #ccc; margin-top: 21px;">
+        <thead>
+            <tr>
+                <th>Created At</th>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{createdDate}}</td>
+                    <td>{{randomOne}}</td>
+                    <td>{{randomTwo}}</td>
+                    <td>{{randomThree}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+</template>
